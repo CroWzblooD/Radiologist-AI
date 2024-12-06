@@ -501,7 +501,7 @@ export default function Home() {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 animate-gradient">
-              Next-Gen Radiology with AI
+               Radiology with AI
             </h1>
             <p className="text-xl text-cyan-100 mb-12">
               Transform your radiology practice with AI-powered analysis. Get instant insights,
