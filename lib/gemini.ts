@@ -47,7 +47,7 @@ export const analyzeImage = async (base64Image: string): Promise<string> => {
 // Export the Gemini instance for chat functionality
 export const chatWithGemini = async (
   prompt: string, 
-  history: string[] = []
+  history: { role: 'user' | 'model'; parts: { text: string }[] }[] = []
 ): Promise<string> => {
   try {
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
