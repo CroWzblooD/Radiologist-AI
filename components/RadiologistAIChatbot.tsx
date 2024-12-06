@@ -235,7 +235,15 @@ How can I assist with your medical imaging needs today?`,
         return;
       }
 
-      const response = await genAI.chatWithGemini(text, []);
+      const chat = genAI.getGenerativeModel({ model: "gemini-pro" }).startChat({
+        history: [],
+        generationConfig: {
+          maxOutputTokens: 1000,
+        },
+      });
+
+      const result = await chat.sendMessage(text);
+      const response = await result.response;
       const formattedResponse = response.text();
 
       const botResponse: Message = {
